@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+			img{transition: all .4s; }
+			.f{
+				animation: opacityG 2s;
+			}
+			@keyframes opacityG{
+				from{opacity: 0;}
+				to{opacity: 1;}
+			}
+	</style>
+	<body>
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		1 <br />
+		<img class="c_lazy" src="./images/default_load.png" src-original="./images/guess_like_img1.jpg"/> <br />
+		<img class="c_lazy" src="./images/default_load.png" src-original="./images/guess_like_img1.jpg"/> <br />
+		<img class="c_lazy" src="./images/default_load.png" src-original="./images/guess_like_img1.jpg"/> <br />
+		<img class="c_lazy" src="./images/default_load.png" src-original="./images/guess_like_img1.jpg"/> <br />
+		<img class="c_lazy" src="./images/default_load.png" src-original="./images/guess_like_img1.jpg"/> <br />
+		<script type="text/javascript">
+			$(function(){
+				$(window).on('scroll',function(){
+					var win_h=$(window).height();
+					var win_top=$(window).scrollTop();
+					$('.c_lazy').each(function(){
+						var e_top=$(this).offset().top;
+						if(e_top<win_h+win_top){
+							if($(this).attr('src')=="./images/default_load.png"){
+								$(this).attr('src',$(this).attr('src-original'));
+								$(this).addClass('f');
+								console.log("图片加载成功");
+							}
+							
+						}
+						
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
